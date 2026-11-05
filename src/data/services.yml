@@ -2,10 +2,28 @@
 #   label (required) — bold heading on the row
 #   html  (required) — body content (HTML allowed)
 
-- label: Conferences & Journals
-  html: Conference A'25–'26 · Conference B'26 · Journal C
-
-- label: Workshops
+- label: Student Representative, Building Committee
   html: >
-    <a href="https://example.com/">Workshop One</a> @ Conference A'25 ·
-    Workshop Two @ Conference B'26
+    School of Computing and Artificial Intelligence, University of Wisconsin–Madison<br />
+    2026–present
+
+- label: Student Representative, Ph.D. Program
+  html: >
+    Information School, University of Wisconsin–Madison<br />
+    2024–2025
+
+- label: Journal Reviewer
+  html: >
+    Education Sciences;
+    Higher Education Research &amp; Development;
+    Humanities and Social Sciences Communications;
+    International Journal of Chinese Education;
+    Journal of the Association for Information Science and Technology (JASIST);
+    Scientific Data;
+    Studies in Higher Education
+
+- label: Conference Reviewer
+  html: >
+    Association for the Study of Higher Education (ASHE) Annual Conference;
+    American Educational Research Association (AERA) Annual Meeting;
+    iConference

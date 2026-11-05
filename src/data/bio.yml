@@ -2,13 +2,16 @@
 # Each entry is rendered as one <p>. HTML (e.g., <a>, <strong>) is supported.
 paragraphs:
   - >
-    Hi, I'm Your Name — a Ph.D. student at Your University, advised by
-    <a href="https://example.com/">Prof. Advisor Name</a> in the
-    <a href="https://example.com/">Your Lab</a>.
+    Hi, I'm Xi Hong, a fourth-year Ph.D. student in Informaton Science at the University of Wisconsin-Madison, advised by
+    <a href="https://chaoqunni.github.io">Prof. Chaoqun Ni</a> in the
+    <a href="https://metasci.ischool.wisc.edu/people.html">MetaScience Research Lab</a>.
   - >
-    My research focuses on <a href="https://example.com/">your research topic</a>.
-    Replace this paragraph with a short summary of your research agenda
-    and the problems you care about.
+    My research lies at the intersection of computational social science,
+    data science, and education and science policy studies. I currently focus
+    on how AI is reshaping educational and scientific ecosystems and on
+    developing agentic AI systems to support evidence-informed policymaking
+    in these domains.
   - >
-    I'm currently working on your current project. If any of this resonates,
-    I'd love to hear from you — drop me an email.
+    I am exploring opportunities in both academia and industry. I’d love to
+    chat about my recent work and potential career opportunities.
+    <a href="mailto:xhong39@wisc.edu?subject=Career%20opportunities">✉️ Get in touch</a>.

@@ -6,3 +6,6 @@ npm-debug.log*
 
 # ─── macOS ───
 .DS_Store
+
+# Local work notes (not part of the public website)
+logs/

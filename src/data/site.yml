@@ -1,38 +1,56 @@
+# Source: Xi_Hong_CV_academic_1011.pdf, supplied by Xi Hong.
+# GitHub username: xhong39, supplied separately in this conversation.
+# TODO items below mark information/assets not provided in the CV.
+
 # ─── Basic identity ──────────────────────────────────────
-name: Your Name
-nameHan: ""            # optional name in another script; leave empty to hide
-position: Ph.D. Student in Computer Science
-affiliation: Your University
-email: you[at]university[dot]edu
+name: Xi Hong
+# Pronunciation spelling supplied by Xi Hong; also used for browser speech.
+pronunciation: Shee Hong
+# TODO: Chinese name is not provided in the CV. Empty means hidden.
+nameHan: ""
+# The CV lists a Ph.D. in Information in progress; candidacy is not specified.
+position: Ph.D. Student in Information Science
+affiliation: University of Wisconsin–Madison
+email: xhong39@wisc.edu
 
 # ─── SEO ─────────────────────────────────────────────────
-title: Your Name
-description: Homepage of Your Name — Ph.D. student at Your University, working on your research area.
-keywords: your name, research area, your university
+title: Xi Hong
+# Description and keywords are summaries of the CV, rather than quoted fields.
+description: >
+  Xi Hong is a Ph.D. student in Information at the University of
+  Wisconsin–Madison, studying higher education, academic careers, AI's impact
+  on the scientific ecosystem, and agentic AI for science policymaking.
+keywords: Xi Hong, higher education, education policy, science policy, academic careers, computational social science, data science, agentic AI, University of Wisconsin–Madison
 
 # ─── Profile picture ─────────────────────────────────────
-avatar: /assets/img/avatar.svg
-favicon: /assets/img/favicon.svg
+# Profile photo supplied separately: professional photos/final_5850.JPG.
+# The original image is preserved; the circular framing is applied with CSS.
+avatar: /assets/img/xi-hong-profile.jpg?v=9c9dad6143de
 
 # ─── Social links ────────────────────────────────────────
 # Icons: Font Awesome 6 (fab fa-*) and Academicons (ai ai-*).
 social:
   - icon: ai ai-google-scholar
     label: Google Scholar
-    href: https://scholar.google.com/
+    href: https://scholar.google.com/citations?user=NHsxY_sAAAAJ&hl=en
   - icon: fab fa-github
     label: GitHub
-    href: https://github.com/
+    href: https://github.com/xhong39
   - icon: fab fa-linkedin
     label: LinkedIn
-    href: https://www.linkedin.com/
-  - icon: fab fa-x-twitter
-    label: X (Twitter)
-    href: https://x.com/
+    href: https://www.linkedin.com/in/xi-hong-878ab9292/
+  # TODO (optional): X/Twitter profile URL is not provided in the CV.
+  # Uncomment this entry only after adding your actual profile URL.
+  # - icon: fab fa-x-twitter
+  #   label: X (Twitter)
+  #   href: ""
 
 # ─── Contact callout ─────────────────────────────────────
 # Set `enabled: true` to show a callout at the top of the About section.
+# Display preference: kept at the template default. The career-interest
+# wording below reflects your earlier message in this conversation.
 contact:
   enabled: false
   message: >
-    Interested in a collaboration or just a short chat? Feel free to email me.
+    For research collaborations or career opportunities in academia and
+    industry, please contact me at xhong39@wisc.edu.

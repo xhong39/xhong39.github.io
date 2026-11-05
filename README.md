@@ -1,67 +1,66 @@
-# Academic Homepage Template
+# Xi Hong's personal website
 
-A clean, single-page academic homepage built with [Astro](https://astro.build).
-All content lives in YAML files; there is no backend and no CMS. Light and dark
-themes, responsive layout, and automatic deployment to GitHub Pages.
+An academic homepage built with Astro, with content stored in YAML files.
 
-Sections: About · News · Selected Publications · Projects · Academic Services ·
-Education · Teaching.
+Website address: https://xhong39.github.io/
 
-**Live demo:** https://boyugou.github.io/academic-homepage-template/
+GitHub repository: https://github.com/xhong39/xhong39.github.io
 
-## Quick start
+## Make the website public
 
-1. Click **Use this template** (or fork). Name the repo `YOUR-USERNAME.github.io` for a root URL.
-2. In the repo, go to **Settings → Pages → Source: GitHub Actions**.
-3. Edit the files in `src/data/` (see below). `site` and `base` are derived from the
-   repository name automatically, so the site works as `USER.github.io` or as a project
-   site at `USER.github.io/REPO/`.
-4. Replace `public/assets/img/avatar.svg` with your photo (update `avatar` in `site.yml`).
-5. Push to `main`; the workflow builds and deploys the site.
+1. Create a **public** repository named **xhong39.github.io** under the **xhong39** account and upload this project's source files.
+2. Open the repository's **Settings → Pages**.
+3. Under **Build and deployment → Source**, choose **GitHub Actions**.
+4. Open **Actions → Deploy site**. A push to `main` starts deployment automatically; use **Run workflow** if needed.
+5. Wait for the build and deploy jobs to finish successfully, then visit https://xhong39.github.io/.
 
-Local preview:
+The repository name makes this a personal user site, so no repository name is added to the website URL. GitHub Pages serves it over HTTPS. This project uses an Astro build, so select GitHub Actions rather than publishing the unbuilt source from a branch.
+
+## Update the website
+
+Edit these files locally or with GitHub's file editor, then commit changes to `main`. The workflow rebuilds and republishes the site automatically.
+
+| File | Content |
+| --- | --- |
+| `src/data/site.yml` | Name, pronunciation, photo, affiliation, email, social links |
+| `src/data/bio.yml` | About paragraphs |
+| `src/data/news.yml` | News |
+| `src/data/publications.yml` | Selected publications and preprints, images, links, badges |
+| `src/data/services.yml` | Institutional and academic services |
+| `src/data/teaching.yml` | Teaching appointments and courses |
+| `public/assets/img/` | Website images |
+| `src/styles/global.css` | Layout, colors, typography |
+
+For local edits, run these commands from the project folder:
 
 ```bash
-npm install
-npm run dev      # http://localhost:4321
-npm run build    # production build into ./dist
+npm ci
+npm run dev
 ```
 
-## Content files (`src/data/`)
+Preview at http://localhost:4321/. Before uploading a change:
 
-| File | Section |
-|---|---|
-| `site.yml` | Sidebar, `<head>`, social links |
-| `bio.yml` | About (HTML allowed) |
-| `news.yml` | News, newest first; optional `tags` (`tone: accept` green, `oral` red) |
-| `publications.yml` | Selected publications, newest first |
-| `projects.yml` | Projects; optional `repo: owner/name` adds a live GitHub ★ count |
-| `services.yml` | Academic services |
-| `education.yml` | Education |
-| `teaching.yml` | Teaching |
-
-A publication entry:
-
-```yaml
-- title: "Paper title"
-  authors: <strong>Your Name</strong>, Coauthor
-  venue: Conference 2026
-  collab: Industry Partner         # optional
-  image: /assets/img/paper.png     # file in public/assets/img/
-  paper: https://arxiv.org/abs/xxxx.xxxxx
-  homepage: https://...            # optional: homepage / code / data / model
-  code: https://github.com/...
-  highlights:                      # optional chips
-    - Spotlight
-    - hf_collection: owner/slug    # live Hugging Face download count
-      label: "{n} HF downloads"
-      fallback: 10K+
+```bash
+npm run build
+git add .
+git commit -m "Update website"
+git push origin main
 ```
 
-Styling is plain CSS in `src/styles/global.css`; colors and spacing are CSS
-variables at the top of the file.
+The workflow builds `dist/` on GitHub. Do not upload `node_modules/`, `dist/`, `.astro/`, or local work notes in `logs/`; these are excluded by `.gitignore`.
+
+## Deployment troubleshooting
+
+- If the public address returns 404, check that the repository name is exactly `xhong39.github.io`, the repository is public, and Pages uses GitHub Actions.
+- If deployment fails, open the failed run under **Actions → Deploy site** and inspect the build or deployment log.
+- If Pages was enabled after the first push, run **Actions → Deploy site → Run workflow**.
+
+Official instructions: [Astro on GitHub Pages](https://docs.astro.build/en/guides/deploy/github/) and [GitHub Pages](https://docs.github.com/en/pages/quickstart).
 
 ## Credits
+
+Based on [Academic Homepage Template](https://github.com/boyugou/academic-homepage-template) by Boyu Gou.
+
 
 The visual layout (sidebar profile + single scrolling column, light/dark themes)
 was originally inspired by the Jekyll theme

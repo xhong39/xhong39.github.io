@@ -3,15 +3,34 @@ import site from '../data/site.yml';
 import { withBase } from '../lib/withBase';
 ---
 <aside>
-  <img class="avatar" src={withBase(site.avatar)} alt={site.name} />
-  <h1 class="name">
-    {site.name}
-    {site.nameHan && <span class="han">{site.nameHan}</span>}
-  </h1>
+  <div class="avatar-frame">
+    <img class="avatar" src={withBase(site.avatar)} alt={`Portrait of ${site.name}`} width="2803" height="3210" />
+  </div>
+  <div class="name-row">
+    <h1 class="name">
+      {site.name}
+      {site.nameHan && <span class="han">{site.nameHan}</span>}
+    </h1>
+    {site.pronunciation && (
+      <button
+        class="pronunciation"
+        type="button"
+        data-pronunciation={site.pronunciation}
+        aria-label={`Hear ${site.name} pronounced ${site.pronunciation}`}
+        title={`Pronounced ${site.pronunciation}`}
+        disabled
+      >
+        <i class="fa-solid fa-volume-high" aria-hidden="true"></i>
+        <em>“{site.pronunciation}”</em>
+      </button>
+    )}
+  </div>
   <p class="role">{site.position}</p>
   <p class="aff">{site.affiliation}</p>
-  <p class="email">{site.email}</p>
   <div class="social">
+    <a href={`mailto:${site.email}`} aria-label={`Email ${site.name} at ${site.email}`} title={site.email}>
+      <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+    </a>
     {site.social.map((s: any) => (
       <a href={s.href} aria-label={s.label} rel="noopener">
         <i class={s.icon}></i>
@@ -19,3 +38,18 @@ import { withBase } from '../lib/withBase';
     ))}
   </div>
 </aside>
+
+<script>
+  const button = document.querySelector<HTMLButtonElement>('[data-pronunciation]');
+  if (button && 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window) {
+    button.disabled = false;
+    button.title = 'Listen to name pronunciation';
+    button.addEventListener('click', () => {
+      const pronunciation = new SpeechSynthesisUtterance(button.dataset.pronunciation ?? '');
+      pronunciation.lang = 'en-US';
+      pronunciation.rate = 0.85;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(pronunciation);
+    });
+  }
+</script>

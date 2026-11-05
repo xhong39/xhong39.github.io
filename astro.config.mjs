@@ -10,7 +10,7 @@ const [owner, repo] = (process.env.GITHUB_REPOSITORY ?? '').split('/');
 const isUserSite = !repo || repo.toLowerCase() === `${owner}.github.io`.toLowerCase();
 
 export default defineConfig({
-  site: owner ? `https://${owner.toLowerCase()}.github.io` : 'https://YOUR-USERNAME.github.io',
+  site: owner ? `https://${owner.toLowerCase()}.github.io` : 'https://xhong39.github.io',
   base: isUserSite ? '/' : `/${repo}`,
   vite: {
     plugins: [yaml()],

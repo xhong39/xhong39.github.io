@@ -1,12 +1,29 @@
-# Optional intro line above the list (HTML allowed). Set to empty string to hide.
-intro: Teaching Assistant at Your University.
+# Each appointment groups its courses beneath the role and institution.
+# Location and appointment dates appear on the right.
+appointments:
+  - role: Lecturer
+    institution: Information School, University of Wisconsin–Madison
+    location: Madison, WI
+    period: "2025"
+    courses:
+      - >
+        Introduction to Digital Information (Taught web development, databases,
+        data analytics, and AI adoption in organizations; hybrid)
 
-courses:
-  - course: CS101 Course Title
-    period: Fall 2025
-    html: >
-      Instructor: <a href="https://example.com/">Prof. Name</a>
+  - role: Teaching assistant
+    institution: Information School, University of Wisconsin–Madison
+    location: Madison, WI
+    period: "2024–present"
+    courses:
+      - Information Divides and Difference in a Multicultural Society (2026; 2027 scheduled) (In person)
+      - Introduction to Computing (2025) (In person)
+      - Introduction to Digital Information (2025) (Hybrid)
 
-  - course: CS201 Another Course
-    period: Spring 2026
-    html: "Instructor: Dr. Name"
+  - role: Teaching assistant
+    institution: School of Education, Tsinghua University
+    location: Beijing, China
+    period: "2019–2021"
+    courses:
+      - Education Measurement Statistics (2021, serving as guest lecturer) (In person)
+      - Academic Writing & Publication (2020) (Online)
+      - Big Data in Education and Learning Analytics (2019) (In person)

@@ -1,20 +1,21 @@
-# News items, newest first.
+# News items, newest first. Keep dates quoted to preserve the month formatting.
 # `tags` are small pills shown after the message; `tone` controls color:
 #   accept (green) | oral (red) | (omit for default gray)
 
-- date: 2026.06
+- date: "2026.10"
   html: >
-    <a href="https://example.com/"><strong>Paper Title</strong></a>
-    accepted to Conference 2026
-  tags:
-    - { label: Oral, tone: oral }
+    Our paper “<strong>Scientific Exploration, Collaboration and Labor Division
+    in the Large Language Model Era</strong>” has been accepted to
+    <a href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/AI-Native_Academia">NeurIPS 2026 Workshop AI-Native Academia</a>.
+    See you in Atlanta this December!
 
-- date: 2026.01
+- date: "2026.08"
   html: >
-    Released <a href="https://example.com/"><strong>Project Name</strong></a>,
-    a short description of the release.
-  tags:
-    - { label: Conference 2026, tone: accept }
+    I wrapped up my summer <strong>data science research internship</strong> at
+    <a href="https://www.digital-science.com/">Digital Science</a>!
 
-- date: 2025.08
-  html: Started the Ph.D. program at Your University.
+- date: "2026.07"
+  html: >
+    Our paper “<strong>Untangling Faculty Turnover: Exploring Retention and
+    Attrition at HBCUs</strong>” has been accepted by
+    <em>American Educational Research Journal</em> (acceptance rate: 5.9%).

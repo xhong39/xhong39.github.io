@@ -1,31 +1,66 @@
-# Selected publications, newest first. See README.md for all fields.
+# Selected publications in the order supplied in Selected Projects/personal website.docx.
 # `authors` accepts HTML; wrap your own name in <strong>.
+# `note` is plain text; `extraLinks` adds optional labeled links.
 
-- title: "Your Paper Title Goes Here"
+- title: "Biomedical Researchers Use Preprints for Speed, but Hesitate to Credit Them in Evaluation"
   authors: >
-    <strong>Your Name</strong>, <a href="https://example.com/">Coauthor One</a>,
-    Coauthor Two
-  venue: Conference 2026
-  image: /assets/img/paper-placeholder.svg
-  paper: https://arxiv.org/
-  homepage: https://example.com/
-  code: https://github.com/
+    <strong>Hong, X.</strong>, Hutchins, B. I., and Ni, C.
+  venue: Preprint · 2026
+  image: /assets/img/publications/biomedical-preprints.png
+  imageAlt: Survey results on the benefits, barriers, and evaluation of biomedical preprints.
+  paper: https://doi.org/10.64898/2026.03.02.709147
   highlights:
-    - Oral
+    - Under review at eLife
+    - Featured in Science
+  extraLinks:
+    - label: Science coverage
+      url: https://www.science.org/content/article/career-effects-preprints-get-mixed-reviews-biomedical-researchers
 
-- title: "Another Paper Title With a Hugging Face Collection"
+- title: "Advisor Career Stage and PhD Advisee Outcomes"
   authors: >
-    Coauthor One, <strong>Your Name</strong>, Coauthor Two
-  collab: Industry Partner      # optional, shown in italics after the authors
-  venue: Journal 2025
-  image: /assets/img/paper-placeholder.svg
-  paper: https://arxiv.org/
-  code: https://github.com/
-  data: https://huggingface.co/
-  model: https://huggingface.co/
+    <strong>Hong, X.</strong>, Liu, J., and Ni, C.
+  venue: Preprint · 2026
+  image: /assets/img/publications/advisor-career-stage.png
+  imageAlt: Comparisons of advisee productivity, citations, and disruption across advisor career stages.
+  paper: https://doi.org/10.48550/arXiv.2608.28616
   highlights:
-    # Live download count of a Hugging Face collection, refreshed monthly.
-    # Remove this entry if you don't use Hugging Face.
-    - hf_collection: owner/collection-slug
-      label: "{n} HF downloads"
-      fallback: 1K+
+    - International Conference on Computational Social Science (IC2S2)
+
+- title: "BibAgent: An Agentic Framework for Traceable Miscitation Detection in Scientific Literature"
+  authors: >
+    Li, P., Lin, F., Xing, S., Zheng, X., <strong>Hong, X.</strong>,
+    Yang, S., Sun, J., Tu, Z., and Ni, C.
+  venue: Preprint · 2026
+  image: /assets/img/publications/bibagent.png
+  imageAlt: BibAgent framework for parsing citations, checking evidence, and detecting miscitation.
+  paper: https://doi.org/10.48550/arXiv.2601.16993
+
+- title: "Scientific Exploration, Collaboration and Labor Division in the Large Language Model Era"
+  authors: >
+    Zheng, X., <strong>Hong, X.</strong>, Liu, J., and Ni, C.
+  venue: Preprint · 2026
+  image: /assets/img/publications/scientific-exploration.png
+  imageAlt: Trends in author contribution roles and labor division before and during the LLM era.
+  paper: https://doi.org/10.48550/arXiv.2607.20923
+  highlights:
+    - NeurIPS 2026 Workshop AI-Native Academia
+
+- title: "Interdisciplinary PhDs Face Barriers to Top University Placement within Their Disciplines"
+  authors: >
+    Zheng, X., Peng, A., <strong>Hong, X.</strong>, Sugimoto, C. R., and Ni, C.
+  venue: Preprint · 2025
+  image: /assets/img/publications/interdisciplinary-phds.svg
+  imageAlt: Relationships between PhD interdisciplinarity, university rank, and disciplinary alignment.
+  paper: https://doi.org/10.48550/arXiv.2503.21912
+  highlights:
+    - Under revision at Nature Communications
+
+- title: "Undergraduate Research and Students’ Learning Outcomes: Digging into Different Disciplinary Contexts"
+  authors: >
+    <strong>Hong, X.</strong>, Gao, X., Coates, H., and Guo, F.
+  venue: Journal paper · 2024
+  image: /assets/img/publications/undergraduate-research.png
+  imageAlt: Conceptual framework linking undergraduate research, disciplinary contexts, and learning outcomes.
+  paper: https://doi.org/10.1080/07294360.2023.2246382
+  highlights:
+    - Higher Education Research & Development

@@ -16,6 +16,9 @@ interface Props {
   venue: string;
   collab?: string;
   image: string;
+  imageAlt?: string;
+  note?: string;
+  extraLinks?: { label: string; url: string }[];
   paper?: string;
   homepage?: string;
   code?: string;
@@ -23,7 +26,7 @@ interface Props {
   model?: string;
   highlights?: Highlight[];
 }
-const { title, authors, venue, collab, image, paper, homepage, code, data, model, highlights } = Astro.props;
+const { title, authors, venue, collab, image, imageAlt, note, extraLinks, paper, homepage, code, data, model, highlights } = Astro.props;
 const headline = paper ?? homepage ?? code ?? data ?? model;
 
 const chips = await Promise.all(
@@ -35,7 +38,9 @@ const chips = await Promise.all(
 );
 ---
 <article class="pub">
-  <img src={withBase(image)} alt="" loading="lazy" />
+  <a class="pub-figure" href={withBase(image)} target="_blank" rel="noopener" aria-label={`View full-size figure for ${title}`}>
+    <img src={withBase(image)} alt={imageAlt ?? ''} loading="lazy" />
+  </a>
   <div>
     <span class="venue">{venue}</span>
     <div class="title">
@@ -45,6 +50,7 @@ const chips = await Promise.all(
       <span set:html={authors}></span>
       {collab && <em class="collab"> ({collab})</em>}
     </div>
+    {note && <p class="pub-note">{note}</p>}
     {chips.length > 0 && (
       <div class="pub-highlights">
         {chips.map((h) => <span class="pub-highlight">{h}</span>)}
@@ -56,6 +62,7 @@ const chips = await Promise.all(
       {code && <a href={code}>Code</a>}
       {data && <a href={data}>Data</a>}
       {model && <a href={model}>Model</a>}
+      {extraLinks?.map((link) => <a href={link.url}>{link.label}</a>)}
     </div>
   </div>
 </article>

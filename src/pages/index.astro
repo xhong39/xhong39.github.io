@@ -8,9 +8,7 @@ import site from '../data/site.yml';
 import bio from '../data/bio.yml';
 import news from '../data/news.yml';
 import publications from '../data/publications.yml';
-import projects from '../data/projects.yml';
 import services from '../data/services.yml';
-import education from '../data/education.yml';
 import teaching from '../data/teaching.yml';
 ---
 <Base>
@@ -49,32 +47,15 @@ import teaching from '../data/teaching.yml';
 
       <!-- Publications -->
       <section id="publications">
-        <SectionHead title="Selected Publications" />
+        <SectionHead title="Selected Publications and Preprints" />
         <div class="pubs">
           {publications.map((p: any) => <Publication {...p} />)}
         </div>
       </section>
 
-      <!-- Projects -->
-      <section id="projects">
-        <SectionHead title="Projects" />
-        <div class="projects">
-          {projects.map((p: any) => (
-            <a class="project" href={p.href} data-repo={p.repo} rel="noopener">
-              <div class="pname">
-                {p.name}
-                <span style="color:var(--text-3);">↗</span>
-                {p.repo && <span class="stars" data-stars data-state="loading">—</span>}
-              </div>
-              <div class="pdesc" set:html={p.description}></div>
-            </a>
-          ))}
-        </div>
-      </section>
-
-      <!-- Academic Services -->
+      <!-- Institutional and Academic Services -->
       <section id="services">
-        <SectionHead title="Academic Services" />
+        <SectionHead title="Institutional and Academic Services" />
         <ul class="list">
           {services.map((s: any) => (
             <li>
@@ -85,36 +66,24 @@ import teaching from '../data/teaching.yml';
         </ul>
       </section>
 
-      <!-- Education -->
-      <section id="education">
-        <SectionHead title="Education" />
-        <ul class="list">
-          {education.map((e: any) => (
-            <li>
-              <span class="label">{e.institution}</span>
-              {e.country && <span style="color:var(--text-3);"> · {e.country}</span>}
-              <div class="sub">{e.degree}</div>
-              <div class="meta">{e.period}</div>
-            </li>
-          ))}
-        </ul>
-      </section>
-
       <!-- Teaching -->
       <section id="teaching">
         <SectionHead title="Teaching" />
-        {teaching.intro && (
-          <p style="color:var(--text-2);font-size:14px;margin-bottom:20px;">{teaching.intro}</p>
-        )}
-        <ul class="list">
-          {teaching.courses.map((c: any) => (
-            <li>
-              <span class="label">{c.course}</span>
-              <div class="sub" set:html={c.html}></div>
-              <div class="meta">{c.period}</div>
-            </li>
+        <div class="teaching-appointments">
+          {teaching.appointments.map((appointment: any) => (
+            <div class="teaching-appointment">
+              <div class="teaching-heading">
+                <h3>{appointment.role}</h3>
+                <span class="teaching-location">{appointment.location}</span>
+                <em>{appointment.institution}</em>
+                <span class="teaching-period">{appointment.period}</span>
+              </div>
+              <ul class="teaching-courses">
+                {appointment.courses.map((course: string) => <li>{course}</li>)}
+              </ul>
+            </div>
           ))}
-        </ul>
+        </div>
       </section>
 
       <footer>{site.name} · updated {new Date().getFullYear()}</footer>
@@ -122,27 +91,6 @@ import teaching from '../data/teaching.yml';
   </div>
 
   <script is:inline>
-    (function () {
-      const fmt = (n) =>
-        n >= 1000
-          ? (n / 1000).toFixed(n >= 10000 ? 0 : 1).replace(/\.0$/, '') + 'k'
-          : n;
-      document.querySelectorAll('[data-repo]').forEach(async (el) => {
-        const repo = el.dataset.repo;
-        const target = el.querySelector('[data-stars]');
-        if (!target) return;
-        try {
-          const r = await fetch(`https://api.github.com/repos/${repo}`);
-          if (!r.ok) throw new Error(r.status);
-          const d = await r.json();
-          target.textContent = fmt(d.stargazers_count);
-          target.removeAttribute('data-state');
-        } catch {
-          target.remove();
-        }
-      });
-    })();
-
     (function () {
       const root = document.documentElement;
       const buttons = document.querySelectorAll('[data-set-theme]');
