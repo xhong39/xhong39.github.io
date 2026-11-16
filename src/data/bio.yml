@@ -2,7 +2,7 @@
 # Each entry is rendered as one <p>. HTML (e.g., <a>, <strong>) is supported.
 paragraphs:
   - >
-    Hi, I'm Xi Hong, a fourth-year Ph.D. student in Informaton Science at the University of Wisconsin–Madison, advised by
+    Hi, I'm Xi Hong, a fourth-year Ph.D. student in Information Science at the University of Wisconsin–Madison, advised by
     <a href="https://chaoqunni.github.io">Prof. Chaoqun Ni</a> in the
     <a href="https://metasci.ischool.wisc.edu/people.html">MetaScience Research Lab</a>.
   - >
