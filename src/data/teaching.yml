@@ -4,7 +4,7 @@ appointments:
   - role: Lecturer
     institution: Information School, University of Wisconsin–Madison
     location: Madison, WI
-    period: "2025"
+    period: "Fall 2025"
     courses:
       - >
         Introduction to Digital Information (Taught web development, databases,
