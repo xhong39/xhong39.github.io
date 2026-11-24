@@ -15,15 +15,15 @@ appointments:
     location: Madison, WI
     period: "2024–present"
     courses:
-      - Information Divides and Difference in a Multicultural Society (2026; 2027 scheduled) (In person)
-      - Introduction to Computing (2025) (In person)
-      - Introduction to Digital Information (2025) (Hybrid)
+      - Information Divides and Difference in a Multicultural Society (Spring 2026, Fall 2026) (In person)
+      - Introduction to Computing (Summer 2025) (In person)
+      - Introduction to Digital Information (Fall 2024, Spring 2025) (Hybrid)
 
   - role: Teaching assistant
     institution: School of Education, Tsinghua University
     location: Beijing, China
     period: "2019–2021"
     courses:
-      - Education Measurement Statistics (2021, serving as guest lecturer) (In person)
-      - Academic Writing & Publication (2020) (Online)
-      - Big Data in Education and Learning Analytics (2019) (In person)
+      - Education Measurement Statistics (Spring 2021, serving as guest lecturer) (In person)
+      - Academic Writing & Publication (Fall 2020) (Online)
+      - Big Data in Education and Learning Analytics (Spring 2019) (In person)
